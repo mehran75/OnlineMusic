@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_margin="3dp"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/thumbnail_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient_dark" />
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/artist_tv"
+            android:layout_toStartOf="@+id/download_btn"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/artist_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/download_btn"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="artist"
+            android:textColor="@color/header_artist_name_color" />
+
+
+        <ImageButton
+            android:id="@+id/download_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:background="@color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_cloud_download_white" />
+
+
+        <ImageView
+            android:id="@+id/equalizer_iv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:alpha=".2"
+            android:scaleType="fitEnd"
+            android:src="@drawable/equalizer"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

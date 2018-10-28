@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OnlineMusic</string>
+    <string name="search_hint">Song, artist, album, etc</string>
+    <string name="use_offline">Use offline</string>
+    <string name="empty_field_error">Please fill this field</string>
+    <string name="OK">Ok</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting">Setting</string>
+    <string name="me">Me</string>
+    <string name="open_drawer">open drawer</string>
+    <string name="close_drawer">close drawer</string>
+    <string name="play_pause_button">play pause button</string>
+    <string name="delete">delete</string>
+    <string name="properties">properties</string>
+    <string name="share">share</string>
+</resources>

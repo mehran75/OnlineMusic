@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="16dp"
+    tools:context=".activity.SearchActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/search_layout"
+        android:orientation="horizontal">
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:id="@+id/search_et_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/search_hint"-->
+        <!--android:textColorHint="@android:color/white">-->
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/search_hint"
+            android:inputType="textAutoComplete"
+            android:textColor="@android:color/white" />
+
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-60dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:onClick="search"
+                android:id="@+id/search_btn"
+                android:src="@drawable/ic_search_white"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/mic_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/red_circle"
+        android:onClick="speech_to_text"
+        app:srcCompat="@drawable/ic_mic_outline_red" />
+
+    <ImageButton
+        android:id="@+id/go_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_cloud_white" />
+
+    <Button
+        android:layout_marginTop="-10dp"
+        android:id="@+id/offline_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="@string/use_offline"
+        android:textAllCaps="false"
+        android:layout_below="@+id/search_layout"
+        android:textColor="@color/white"
+        android:onClick="use_offline"/>
+</RelativeLayout>
